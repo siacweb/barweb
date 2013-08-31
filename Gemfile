@@ -20,7 +20,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
+
+group :test, :development do
+  gem 'turn', '~> 0.8.3', :require => false
+  gem 'rspec-rails', "~> 2.13.1"
+  gem 'capybara', '2.0.0'
+  gem 'launchy'
+  gem 'database_cleaner'
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
