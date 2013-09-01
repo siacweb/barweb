@@ -1,0 +1,15 @@
+<% @home_bar.each do |home_bar| %>
+
+    <section id="home-bar">
+      <h1><%= home_bar.name %></h1>
+
+      <%= image_tag home_bar.main_image.url(:home) %>
+
+      <h3> <%= home_bar.address %>, <%= home_bar.number %> - <%= home_bar.neighborhood %> - <%= home_bar.complement %></h3>
+      <h4> <%= home_bar.city %> - <%= home_bar.state %> - <%= home_bar.country_bar %> - CEP: <%= home_bar.zip %></h4>
+
+
+      <h5> Telefone: <%= home_bar.phone_number %>,<%= home_bar.cellphone_number %></h5>
+    </section>
+
+<% end %>

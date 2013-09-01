@@ -20,7 +20,7 @@ html, body {
     height: 100%;
 }
 
-/* principal */
+/* PRINCIPAL */
 
 .principal {
     height: auto !important;
@@ -46,4 +46,38 @@ html, body {
 .principal .principal-destaques {
     float: left;
     padding: 10px 7px;
+}
+
+
+
+/* HOME BAR */
+#home-bar {
+    height: auto !important;
+    min-height: 96.7%;
+    padding-bottom: 22px;
+}
+#home-bar h1 {
+    text-align: center;
+    height: 35px;
+}
+#home-bar img {
+    margin: 30px 0 0 50px;
+}
+#home-bar h3 {
+    padding: 0 494px 0 50px;
+}
+#home-bar h4 {
+    padding: 0 494px 0 50px;
+}
+#home-bar h5 {
+    padding: 0 494px 0 50px;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    margin-top: -22px;
+    height: 22px;
+    background-color: pink;
+    width: 100%;
+    clear: both;
 }

@@ -13,6 +13,18 @@ Barweb::Application.routes.draw do
 
   get "/events" => "principal#events", :as => :principal_events
 
+  get "/uberlandia/:nome" => "home_bar#index", :as => :homebar
+
+  #TODO: SE FOR USAR A MESMA PÁGINA DA PRINCIPAL,
+  # PEGAR TXT DINAMICAMENTE DE ALGUM JEITO PRA PODER CRIAR SÓ UM ARQUIVO
+  # DEVE DAR PRA USAR O MESMO PELO MENOS ENTRE AS HOMES
+  get "/uberlandia/:nome/contact" => "home_bar#contact", :as => :homebar_contac
+
+  get "/uberlandia/:nome/gallery" => "home_bar#gallery", :as => :homebar_gallery
+
+  get "/uberlandia/:nome/events" => "home_bar#events", :as => :homebar_events
+
+
   root :to =>  "principal#index"
 
 
