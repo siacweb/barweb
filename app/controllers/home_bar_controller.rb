@@ -1,11 +1,13 @@
 class HomeBarController < ApplicationController
 
   def index
-    #@home_bar = HomeBar.find_all_by_name(get_current_name)
-    @home_bar = HomeBar.all
+    #TODO: BUSCAR PELO NOME DO BAR - APENAS NOME QUE BATE COM O QUE ESTÁ SENDO PROCURADO
+    #SÓ TEM Q CARREGAR O Q A PESSOA CLICOU NA PAGINA INICIAL,
+    # N IMPORTA C POR ID OU NOME, MAS NA URL DEVE APARECER O NOME, SO ..
+    @home_bar = HomeBar.first
 
-    #@general_informations = GeneralInformation.all
-    #@general_informations = GeneralInformation.find params[:general_informations_id]
+    #@home_bar = HomeBar.find_all_by_name(get_current_bar_name)
+    #@home_bar = HomeBar.find_all_by_name(params[:name]).first
   end
 
 end

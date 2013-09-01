@@ -7,5 +7,6 @@ class HomeBar < ActiveRecord::Base
                     :url => "/assets/home_bars/:id/images/main_:style.:extension",
                     :path => ":rails_root/public/assets/home_bars/:id/images/main_:style.:extension"
 
+  #TODO: VERIFICAR QUAIS CAMPOS DEVEM SER OBRIGATORIOS
   validates_presence_of :name, :address, :number
 end
