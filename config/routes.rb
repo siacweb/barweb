@@ -1,5 +1,16 @@
 Barweb::Application.routes.draw do
+
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+
+  get "/" => "principal#index", :as => :principal
+
+  root :to =>  "principal#index"
+
+
+
   ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation:

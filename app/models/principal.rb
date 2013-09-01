@@ -5,27 +5,28 @@ class Principal < ActiveRecord::Base
 
   has_attached_file :main_image,
                     :styles => {:medium => "400x300#", :thumb => "100x100#"},
-                    :url => "/assets/homes/:id/images/main_:style.:extension",
-                    :path => ":rails_root/public/assets/homes/:id/images/main_:style.:extension"
+                    :url => "/assets/principals/:id/images/main_:style.:extension",
+                    :path => ":rails_root/public/assets/principals/:id/images/main_:style.:extension"
   has_attached_file :gallery_image,
                     :styles => {:medium => "400x300#", :thumb => "100x100#"},
-                    :url => "/assets/homes/:id/images/gallery_:style.:extension",
-                    :path => ":rails_root/public/assets/homes/:id/images/gallery_:style.:extension"
+                    :url => "/assets/principals/:id/images/gallery_:style.:extension",
+                    :path => ":rails_root/public/assets/principals/:id/images/gallery_:style.:extension"
   has_attached_file :events_image,
                     :styles => {:medium => "400x300#", :thumb => "100x100#"},
-                    :url => "/assets/homes/:id/images/events_:style.:extension",
-                    :path => ":rails_root/public/assets/homes/:id/images/events_:style.:extension"
+                    :url => "/assets/principals/:id/images/events_:style.:extension",
+                    :path => ":rails_root/public/assets/principals/:id/images/events_:style.:extension"
   has_attached_file :contact_image,
                     :styles => {:medium => "400x300#", :thumb => "100x100#"},
-                    :url => "/assets/homes/:id/images/contact_:style.:extension",
-                    :path => ":rails_root/public/assets/homes/:id/images/contact_:style.:extension"
+                    :url => "/assets/principals/:id/images/contact_:style.:extension",
+                    :path => ":rails_root/public/assets/principals/:id/images/contact_:style.:extension"
   has_attached_file :follow_fb_image,
                     :styles => {:medium => "400x300#", :thumb => "100x45#"},
-                    :url => "/assets/homes/:id/images/follow_fb_:style.:extension",
-                    :path => ":rails_root/public/assets/homes/:id/images/follow_fb_:style.:extension"
+                    :url => "/assets/principals/:id/images/follow_fb_:style.:extension",
+                    :path => ":rails_root/public/assets/principals/:id/images/follow_fb_:style.:extension"
   has_attached_file :follow_tw_image,
                     :styles => {:medium => "400x300#", :thumb => "100x45#"},
-                    :url => "/assets/homes/:id/images/follow_tw_:style.:extension",
-                    :path => ":rails_root/public/assets/homes/:id/images/follow_tw_:style.:extension"
+                    :url => "/assets/principals/:id/images/follow_tw_:style.:extension",
+                    :path => ":rails_root/public/assets/principals/:id/images/follow_tw_:style.:extension"
 
+  #TODO: COLOCAR SE ESTÁ OU NÃO ATIVA, PERMITIR QUE APENAS UMA FIQUE ATIVA
 end

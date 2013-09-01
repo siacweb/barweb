@@ -1,0 +1,23 @@
+<% @principals.each do |principal| %>
+
+    <section class="principal">
+      <h1><%= principal.title %></h1>
+
+      <hr/>
+
+
+      <%= image_tag principal.main_image.url(:medium), :class => "main" %>
+
+      <hr/>
+
+
+
+      <hr/>
+
+      <h4>Bares em Destaque</h4>
+
+      <hr/>
+
+    </section>
+
+<% end %>

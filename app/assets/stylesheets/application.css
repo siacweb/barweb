@@ -11,3 +11,39 @@
  *= require_self
  *= require_tree .
  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+/* principal */
+
+.principal {
+    height: auto !important;
+    min-height: 96.7%;
+    padding-bottom: 22px;
+}
+.principal h1 {
+    text-align: center;
+    height: 35px;
+    background-color: pink;
+}
+.principal hr {
+    height: 2px;
+    clear: both;
+}
+.principal .main {
+    margin: 30px 0 0 50px;
+}
+.principal .principal-links {
+    float: left;
+    padding: 10px;
+}
+.principal .principal-destaques {
+    float: left;
+    padding: 10px 7px;
+}
