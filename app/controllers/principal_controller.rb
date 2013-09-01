@@ -6,4 +6,8 @@ class PrincipalController < ApplicationController
 
   end
 
+  def contact
+    render('layouts/contact')
+  end
+
 end

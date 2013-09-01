@@ -10,7 +10,32 @@
 
       <hr/>
 
+      <div class="principal-links" style="padding-left:460px">
+        <a href="<%= principal_gallery_path %>">
+          <%= image_tag principal.gallery_image.url(:thumb)%>
+          <h4>Fotos</h4>
+        </a>
+      </div>
 
+      <div class="principal-links">
+        <a href="<%= principal_events_path %>">
+          <%= image_tag principal.events_image.url(:thumb)%>
+          <h4>Eventos</h4>
+        </a>
+      </div>
+
+      <div class="principal-links">
+        <a href="<%= principal_contact_path %>">
+          <%= image_tag principal.contact_image.url(:thumb)%>
+          <h4>Contato</h4>
+        </a>
+      </div>
+
+      <div>
+        <%= image_tag principal.follow_fb_image.url(:thumb), :class=>"principal-links" %>
+        <%= image_tag principal.follow_tw_image.url(:thumb), :class=>"principal-links", :style => "padding-top:0; padding-bottom:0;" %>
+        <h4 class="principal-links" style="padding-top:5px">Siga-nos!</h4>
+      </div>
 
       <hr/>
 

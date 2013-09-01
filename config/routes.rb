@@ -7,6 +7,12 @@ Barweb::Application.routes.draw do
 
   get "/" => "principal#index", :as => :principal
 
+  get "/contact" => "principal#contact", :as => :principal_contact
+
+  get "/gallery" => "principal#gallery", :as => :principal_gallery
+
+  get "/events" => "principal#events", :as => :principal_events
+
   root :to =>  "principal#index"
 
 
