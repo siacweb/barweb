@@ -1,10 +1,10 @@
 Barweb::Application.routes.draw do
 
 
-
   devise_for :admin_users, ActiveAdmin::Devise.config
 
 
+  #PÁGINAS PARA TODOS OS BARES
   get "/" => "principal#index", :as => :principal
 
   get "/contact" => "principal#contact", :as => :principal_contact
@@ -13,19 +13,25 @@ Barweb::Application.routes.draw do
 
   get "/events" => "principal#events", :as => :principal_events
 
-  get "/uberlandia/:nome" => "home_bar#index", :as => :homebar
-
-  #TODO: SE FOR USAR A MESMA PÁGINA DA PRINCIPAL,
-  # PEGAR TXT DINAMICAMENTE DE ALGUM JEITO PRA PODER CRIAR SÓ UM ARQUIVO
-  # DEVE DAR PRA USAR O MESMO PELO MENOS ENTRE AS HOMES
-  get "/uberlandia/:nome/contact" => "home_bar#contact", :as => :homebar_contac
-
-  get "/uberlandia/:nome/gallery" => "home_bar#gallery", :as => :homebar_gallery
-
-  get "/uberlandia/:nome/events" => "home_bar#events", :as => :homebar_events
-
+  get "/uberlandia/:name" => "home_bar#index", :as => :homebar
 
   root :to =>  "principal#index"
+
+
+
+  #PÁGINAS PAGAS - PARA ESTABELECIMENTOS QUE QUISEREM PAGAR PELO SERVIÇO
+
+
+  #OBS: SE SÓ A GENTE FOR MEXER NO ADMIN, NÃO PRECISA DE SUPER ADMIN PARA SEPARAR ISSO, CASO CONTRÁRIO, PRECISA!
+
+  # TODO: PEGAR TXT DINAMICAMENTE DE ALGUM JEITO PRA PODER CRIAR SÓ UM ARQUIVO
+  # DEVE DAR PRA USAR O MESMO PELO MENOS ENTRE AS HOMES
+  get "/uberlandia/:name/contact" => "home_bar#contact", :as => :homebar_contac
+
+  get "/uberlandia/:name/gallery" => "home_bar#gallery", :as => :homebar_gallery
+
+  get "/uberlandia/:name/events" => "home_bar#events", :as => :homebar_events
+
 
 
 
