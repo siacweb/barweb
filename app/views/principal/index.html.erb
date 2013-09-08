@@ -40,6 +40,21 @@
       <hr/>
 
       <h4>Bares em Destaque</h4>
+      <% @home_bars.each_with_index do |destaque, index| %>
+
+          <!-- TODO: colocar pra buscar os 7 primeiros -->
+          <% if index <= 7 %>
+              <div class="principal-destaques">
+
+                  <%= image_tag destaque.main_image.url(:thumb) %>
+                  <h5><%= destaque.name %></h5>
+
+              </div>
+          <% else %>
+              <% break %>
+          <% end %>
+
+      <% end %>
 
       <hr/>
 
